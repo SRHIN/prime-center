@@ -672,8 +672,8 @@
     </div>
   </section>
 
-  <!-- ========================================== -->
-  <!-- 7. BLOGS & INTERNAL NEWS                   -->
+<!-- ========================================== -->
+  <!-- 7. BLOGS & INTERNAL NEWS (DYNAMIC API)     -->
   <!-- ========================================== -->
   <section class="py-20 px-6 max-w-6xl mx-auto space-y-12">
     <div class="space-y-1">
@@ -685,90 +685,20 @@
       <p class="text-slate-600 text-sm font-body">Building partnerships that strengthen research, innovation, and equitable health outcomes.</p>
     </div>
 
-    <div class="grid sm:grid-cols-2 lg:grid-cols-2 gap-8">
-      <!-- Article 1 -->
-      <article class="bg-white rounded-3xl border border-slate-200 overflow-hidden shadow-sm flex flex-col justify-between p-6 space-y-5">
-        <div class="h-52 w-full rounded-2xl overflow-hidden bg-slate-100">
-          <img src="https://srhin.org/wp-content/uploads/2026/04/WhatsApp-Image-2026-04-14-at-09.35.54.jpeg" alt="Maternal health" class="w-full h-full object-cover">
-        </div>
-        <div class="space-y-2">
-          <span class="text-xs text-slate-400 font-semibold uppercase">PRIME Insights</span>
-          <h3 class="text-xl font-heading font-semibold text-slate-900 leading-snug">
-            <a href="https://srhin.org/beyond-awareness-turning-maternal-health-knowledge-into-action-in-nigeria/" target="_blank" rel="noopener" class="hover:text-[#002190] transition">
-              Beyond Awareness: Turning Maternal Health Knowledge into Action in Nigeria
-            </a>
-          </h3>
-        </div>
-        <div>
-          <a href="https://srhin.org/beyond-awareness-turning-maternal-health-knowledge-into-action-in-nigeria/" target="_blank" rel="noopener" class="inline-flex items-center gap-1.5 text-xs font-semibold text-[#002190] hover:underline">
-            <span>Read More</span>
-            <span class="material-symbols-outlined text-sm">north_east</span>
-          </a>
-        </div>
-      </article>
+    <!-- Dynamic Grid Container where 4 posts will be injected via JavaScript -->
+    <div id="prime-dynamic-blogs-grid" class="grid sm:grid-cols-2 lg:grid-cols-2 gap-8">
+      <!-- Loading state skeleton / fallback -->
+      <div class="col-span-full text-center py-10 text-slate-400 text-sm font-body">
+        Loading latest PRIME insights...
+      </div>
+    </div>
 
-      <!-- Article 2 -->
-      <article class="bg-white rounded-3xl border border-slate-200 overflow-hidden shadow-sm flex flex-col justify-between p-6 space-y-5">
-        <div class="h-52 w-full rounded-2xl overflow-hidden bg-slate-100">
-          <img src="https://srhin.org/wp-content/uploads/2026/02/WhatsApp-Image-2026-02-24-at-09.48.43-2.jpeg" alt="HIV Prevention" class="w-full h-full object-cover">
-        </div>
-        <div class="space-y-2">
-          <span class="text-xs text-slate-400 font-semibold uppercase">PRIME Insights</span>
-          <h3 class="text-xl font-heading font-semibold text-slate-900 leading-snug">
-            <a href="https://srhin.org/srhin-expands-hiv-prevention-education-across-communities-idp-settings-and-university-campuses-through-the-collaborate-to-eliminate-project/" target="_blank" rel="noopener" class="hover:text-[#002190] transition">
-              SRHIN Expands HIV Prevention Education Across Communities, IDP Settings, and University Campuses Through the Collaborate to Eliminate Project
-            </a>
-          </h3>
-        </div>
-        <div>
-          <a href="https://srhin.org/srhin-expands-hiv-prevention-education-across-communities-idp-settings-and-university-campuses-through-the-collaborate-to-eliminate-project/" target="_blank" rel="noopener" class="inline-flex items-center gap-1.5 text-xs font-semibold text-[#002190] hover:underline">
-            <span>Read More</span>
-            <span class="material-symbols-outlined text-sm">north_east</span>
-          </a>
-        </div>
-      </article>
-
-      <!-- Article 3 -->
-      <article class="bg-white rounded-3xl border border-slate-200 overflow-hidden shadow-sm flex flex-col justify-between p-6 space-y-5">
-        <div class="h-52 w-full rounded-2xl overflow-hidden bg-slate-100">
-          <img src="https://srhin.org/wp-content/uploads/2026/03/Untitled-design-2.png" alt="Maternal Equity" class="w-full h-full object-cover">
-        </div>
-        <div class="space-y-2">
-          <span class="text-xs text-slate-400 font-semibold uppercase">PRIME Insights</span>
-          <h3 class="text-xl font-heading font-semibold text-slate-900 leading-snug">
-            <a href="https://srhin.org/rights-justice-and-action-for-mothers-and-children-why-maternal-health-equity-matters-more-than-ever/" target="_blank" rel="noopener" class="hover:text-[#002190] transition">
-              Rights, Justice, and Action for Mothers and Children: Why Maternal Health Equity Matters More Than Ever
-            </a>
-          </h3>
-        </div>
-        <div>
-          <a href="https://srhin.org/rights-justice-and-action-for-mothers-and-children-why-maternal-health-equity-matters-more-than-ever/" target="_blank" rel="noopener" class="inline-flex items-center gap-1.5 text-xs font-semibold text-[#002190] hover:underline">
-            <span>Read More</span>
-            <span class="material-symbols-outlined text-sm">north_east</span>
-          </a>
-        </div>
-      </article>
-
-      <!-- Article 4 -->
-      <article class="bg-white rounded-3xl border border-slate-200 overflow-hidden shadow-sm flex flex-col justify-between p-6 space-y-5">
-        <div class="h-52 w-full rounded-2xl overflow-hidden bg-slate-100">
-          <img src="https://srhin.org/wp-content/uploads/2026/03/unnamed-4.jpg" alt="Community Health" class="w-full h-full object-cover">
-        </div>
-        <div class="space-y-2">
-          <span class="text-xs text-slate-400 font-semibold uppercase">PRIME Insights</span>
-          <h3 class="text-xl font-heading font-semibold text-slate-900 leading-snug">
-            <a href="https://srhin.org/srhin-advances-noma-awareness-and-prevention-in-northern-nigeria-through-community-outreach-in-borno-and-kano/" target="_blank" rel="noopener" class="hover:text-[#002190] transition">
-              SRHIN Advances Noma Awareness and Prevention in Northern Nigeria Through Community Outreach in Borno and Kano
-            </a>
-          </h3>
-        </div>
-        <div>
-          <a href="https://srhin.org/srhin-advances-noma-awareness-and-prevention-in-northern-nigeria-through-community-outreach-in-borno-and-kano/" target="_blank" rel="noopener" class="inline-flex items-center gap-1.5 text-xs font-semibold text-[#002190] hover:underline">
-            <span>Read More</span>
-            <span class="material-symbols-outlined text-sm">north_east</span>
-          </a>
-        </div>
-      </article>
+    <!-- Dynamic "More Blogs" Button Container -->
+    <div id="prime-more-blogs-btn-wrapper" class="text-center pt-2 hidden">
+      <a href="https://srhin.org/blog-database/?category=prime" target="_blank" rel="noopener" class="inline-flex items-center gap-2 bg-[#002190] hover:bg-[#001766] text-white text-xs font-semibold px-6 py-3 rounded-full transition shadow-sm">
+        <span>More Blogs</span>
+        <span class="material-symbols-outlined text-sm">north_east</span>
+      </a>
     </div>
   </section>
 
@@ -1350,6 +1280,79 @@
       window.scrollTo({ top: 0, behavior: 'smooth' });
     });
   </script>
+
+  <!-- Dynamic WordPress PRIME Blog Fetcher (4 Posts) -->
+<script>
+  document.addEventListener("DOMContentLoaded", async function () {
+    const gridContainer = document.getElementById("prime-dynamic-blogs-grid");
+    const moreBtnWrapper = document.getElementById("prime-more-blogs-btn-wrapper");
+    
+    if (!gridContainer) return;
+
+    try {
+      // 1. Fetch category ID for 'prime' to ensure accurate querying
+      const catResponse = await fetch("https://srhin.org/wp-json/wp/v2/categories?slug=prime");
+      const categories = await catResponse.json();
+      
+      let categoryParam = "";
+      if (categories && categories.length > 0) {
+        categoryParam = `&categories=${categories[0].id}`;
+      }
+
+      // 2. Fetch the 4 latest posts for PRIME (including featured media)
+      const postsResponse = await fetch(`https://srhin.org/wp-json/wp/v2/posts?per_page=4${categoryParam}&_embed=true`);
+      const posts = await postsResponse.json();
+
+      if (!posts || posts.length === 0) {
+        gridContainer.innerHTML = `<div class="col-span-full text-center py-10 text-slate-500 text-sm font-body">No recent blog posts found for PRIME at the moment.</div>`;
+        return;
+      }
+
+      // 3. Clear container and render posts matching PRIME's exact card styling
+      gridContainer.innerHTML = "";
+      
+      posts.forEach(post => {
+        let imageUrl = "https://srhin.org/wp-content/uploads/2026/04/WhatsApp-Image-2026-04-14-at-09.35.54.jpeg"; // Fallback image
+        if (post._embedded && post._embedded['wp:featuredmedia'] && post._embedded['wp:featuredmedia'][0].source_url) {
+          imageUrl = post._embedded['wp:featuredmedia'][0].source_url;
+        }
+
+        const articleHTML = `
+          <article class="bg-white rounded-3xl border border-slate-200 overflow-hidden shadow-sm flex flex-col justify-between p-6 space-y-5">
+            <div class="h-52 w-full rounded-2xl overflow-hidden bg-slate-100">
+              <img src="${imageUrl}" alt="${post.title.rendered}" class="w-full h-full object-cover">
+            </div>
+            <div class="space-y-2">
+              <span class="text-xs text-slate-400 font-semibold uppercase">PRIME Insights</span>
+              <h3 class="text-xl font-heading font-semibold text-slate-900 leading-snug">
+                <a href="${post.link}" target="_blank" rel="noopener" class="hover:text-[#002190] transition">
+                  ${post.title.rendered}
+                </a>
+              </h3>
+            </div>
+            <div>
+              <a href="${post.link}" target="_blank" rel="noopener" class="inline-flex items-center gap-1.5 text-xs font-semibold text-[#002190] hover:underline">
+                <span>Read More</span>
+                <span class="material-symbols-outlined text-sm">north_east</span>
+              </a>
+            </div>
+          </article>
+        `;
+
+        gridContainer.insertAdjacentHTML('beforeend', articleHTML);
+      });
+
+      // 4. Show the "More Blogs" button wrapper since posts loaded successfully
+      if (moreBtnWrapper) {
+        moreBtnWrapper.classList.remove('hidden');
+      }
+
+    } catch (error) {
+      console.error("Error fetching dynamic PRIME blogs:", error);
+      gridContainer.innerHTML = `<div class="col-span-full text-center py-10 text-slate-500 text-sm font-body">Unable to load latest posts. Please visit our <a href="https://srhin.org/blog-database/?category=prime" class="text-[#002190] underline font-semibold">Blog Database</a>.</div>`;
+    }
+  });
+</script>
 
 </body>
 </html>
