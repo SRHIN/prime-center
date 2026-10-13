@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>PRIME | Partnership for Reproductive Health, Infectious Disease & Maternal and Child Health Equity Center - SRHIN</title>
+  <title>Programs &amp; Initiatives - PRIME Center - SRHIN</title>
 
   <!-- Favicon / Site Icon -->
   <link rel="icon" href="https://srhin.org/wp-content/uploads/2026/04/cropped-siteicon-32x32.png" sizes="32x32">
@@ -51,290 +51,39 @@
     h1, h2, h3, h4, h5, h6 {
       font-family: 'Questrial', sans-serif;
     }
-
-    /* Team Carousel Responsive Track */
-    .srhin-team-carousel-section {
-      --primary: #002190;
-      --on-background: #171d1b;
-      --secondary: #4d6169;
-      --outline-variant: #becab7;
-      --surface-card: #ffffff;
-      width: 100%;
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 40px 10px;
-      position: relative;
-      font-family: 'Manrope', sans-serif;
-    }
-    .srhin-team-carousel-section * { box-sizing: border-box; }
-    .srhin-team-carousel-section a { text-decoration: none !important; outline: none !important; }
-    .srhin-carousel-wrapper { position: relative; width: 100%; }
-    .srhin-carousel-viewport {
-      position: relative;
-      overflow: hidden;
-      padding: 20px 0 45px 0;
-      cursor: grab;
-      user-select: none;
-      -webkit-user-select: none;
-    }
-    .srhin-carousel-viewport.is-dragging { cursor: grabbing; }
-    .srhin-carousel-track {
-      display: flex;
-      transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
-      will-change: transform;
-      align-items: center;
-    }
-    .srhin-team-card {
-      flex: 0 0 100%;
-      padding: 0 12px;
-      transition: transform 0.5s ease, opacity 0.5s ease, filter 0.5s ease;
-      opacity: 0.5;
-      filter: blur(1.5px);
-      transform: scale(0.9);
-      pointer-events: none;
-    }
-    @media (min-width: 640px) {
-      .srhin-team-card { flex: 0 0 50%; }
-    }
-    @media (min-width: 1024px) {
-      .srhin-team-card { flex: 0 0 33.333%; padding: 0 15px; }
-    }
-    .srhin-team-card.is-active {
-      opacity: 1;
-      filter: blur(0);
-      transform: scale(1);
-      pointer-events: auto;
-      z-index: 2;
-    }
-    .srhin-team-card-inner {
-      background: var(--surface-card);
-      border: 1px solid var(--outline-variant);
-      border-radius: 24px;
-      padding: 36px 24px;
-      text-align: center;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.04);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      height: 100%;
-    }
-    .srhin-team-card.is-active .srhin-team-card-inner {
-      border-color: var(--primary);
-      box-shadow: 0 20px 40px rgba(0, 33, 144, 0.12);
-    }
-    .srhin-team-avatar {
-      width: 96px;
-      height: 96px;
-      border-radius: 50%;
-      overflow: hidden;
-      margin-bottom: 20px;
-      border: 3px solid var(--outline-variant);
-      flex-shrink: 0;
-      transition: border-color 0.3s ease;
-      display: block;
-    }
-    .srhin-team-card.is-active .srhin-team-avatar { border-color: var(--primary); }
-    .srhin-team-avatar img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-      pointer-events: none;
-    }
-    .srhin-team-name {
-      font-size: 20px;
-      font-weight: 700;
-      color: var(--on-background);
-      margin: 0 0 6px 0;
-      transition: color 0.2s ease;
-      font-family: 'Questrial', sans-serif;
-    }
-    .srhin-team-name-link:hover .srhin-team-name { color: var(--primary); }
-    .srhin-team-role {
-      font-size: 14px;
-      line-height: 1.5;
-      color: var(--secondary);
-      margin: 0 0 20px 0;
-      min-height: 42px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    .srhin-team-actions { display: inline-flex; align-items: center; gap: 10px; }
-    .srhin-team-social, .srhin-team-profile-btn {
-      width: 38px;
-      height: 38px;
-      border-radius: 50% !important;
-      background: rgba(0, 33, 144, 0.08);
-      color: var(--primary);
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      transition: all 0.25s ease;
-      flex-shrink: 0;
-      padding: 0 !important;
-    }
-    .srhin-team-social:hover, .srhin-team-profile-btn:hover {
-      background: var(--primary);
-      color: #ffffff;
-      transform: translateY(-2px);
-    }
-    .srhin-team-social svg { width: 18px; height: 18px; fill: currentColor; }
-    .srhin-team-profile-btn .material-symbols-outlined { font-size: 20px; line-height: 1; }
-
-    .srhin-nav-arrow {
-      position: absolute;
-      top: calc(50% - 22px);
-      width: 44px !important;
-      height: 44px !important;
-      border-radius: 50% !important;
-      background: #ffffff !important;
-      border: 1px solid var(--outline-variant) !important;
-      color: var(--primary) !important;
-      align-items: center !important;
-      justify-content: center !important;
-      cursor: pointer !important;
-      z-index: 20;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12);
-      transition: all 0.25s ease !important;
-    }
-    .srhin-nav-arrow:hover {
-      background: var(--primary) !important;
-      color: #ffffff !important;
-      border-color: var(--primary) !important;
-      transform: scale(1.08);
-    }
-    .srhin-nav-arrow.prev { left: -16px; }
-    .srhin-nav-arrow.next { right: -16px; }
-    .srhin-carousel-dots {
-      display: flex;
-      justify-content: center;
-      gap: 10px;
-      margin-top: 5px;
-    }
-    .srhin-dot {
-      width: 10px !important;
-      height: 10px !important;
-      border-radius: 50% !important;
-      background: var(--outline-variant);
-      border: none !important;
-      padding: 0 !important;
-      cursor: pointer;
-      transition: background 0.3s ease, transform 0.3s ease;
-    }
-    .srhin-dot.active {
-      background: var(--primary);
-      transform: scale(1.3);
-    }
   </style>
 </head>
 
 <body>
 
   <!-- ========================================== -->
-  <!-- 1. OFFICIAL SRHIN HEADER                   -->
+  <!-- 1. CLEANED PRIME HEADER                    -->
   <!-- ========================================== -->
   <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200 transition-all font-['Manrope',sans-serif]">
-    <!-- Top Utility Bar: Regional Selector -->
-    <div class="border-b border-slate-100 bg-slate-50/80 text-xs font-body text-slate-600">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 flex justify-end items-center h-8">
-        <div class="relative" id="srhinRegionDropdown">
-          <button type="button" id="srhinRegionBtn" aria-expanded="false" class="inline-flex items-center gap-1.5 font-medium hover:text-[#002190] transition py-1">
-            <span>SRHIN Global</span>
-            <span class="material-symbols-outlined text-sm transition-transform duration-200" id="srhinRegionChevron">expand_more</span>
-          </button>
-          <div id="srhinRegionMenu" class="hidden absolute right-0 top-full mt-1 w-44 bg-white border border-slate-200 rounded-xl shadow-lg py-1.5 z-50">
-            <a href="https://srhin.org/" class="block px-4 py-2 hover:bg-slate-50 hover:text-[#002190] font-medium transition">SRHIN Africa</a>
-            <a href="http://sierraleone.srhin.org" target="_blank" rel="noopener noreferrer" class="block px-4 py-2 hover:bg-slate-50 hover:text-[#002190] font-medium transition">SRHIN Sierra Leone</a>
-            <a href="http://uganda.srhin.org" target="_blank" rel="noopener noreferrer" class="block px-4 py-2 hover:bg-slate-50 hover:text-[#002190] font-medium transition">SRHIN Uganda</a>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Main Navigation Bar -->
     <div class="max-w-7xl mx-auto px-4 sm:px-6">
       <div class="flex items-center justify-between h-20">
         
         <!-- Brand Logo -->
-        <a href="https://srhin.org/" class="flex-shrink-0 flex items-center">
+        <a href="https://prime.srhin.org" class="flex-shrink-0 flex items-center">
           <img src="https://srhin.org/wp-content/uploads/2023/02/Logo-with-horizontal-text-colour@4x.png" alt="Slum and Rural Health Initiative" class="h-6 sm:h-11 max-w-[150px] sm:max-w-[220px] w-auto object-contain">
         </a>
 
         <!-- Desktop Nav Items -->
         <nav class="hidden lg:flex items-center space-x-1 font-body text-[15px] font-medium text-slate-700">
-          <a href="https://srhin.org/" class="px-3.5 py-2 rounded-lg hover:text-[#002190] transition">Home</a>
-
-          <!-- Dropdown: About Us -->
-          <div class="relative group">
-            <button type="button" class="inline-flex items-center gap-1 px-3.5 py-2 rounded-lg group-hover:text-[#002190] transition">
-              <span>About Us</span>
-              <span class="material-symbols-outlined text-base transition-transform group-hover:rotate-180 duration-200">expand_more</span>
-            </button>
-            <div class="absolute left-0 top-full hidden group-hover:block group-focus-within:block w-56 pt-2 z-50">
-              <div class="bg-white border border-slate-200 rounded-2xl shadow-xl py-2 overflow-hidden">
-                <a href="https://srhin.org/our-values/" class="block px-4 py-2.5 text-sm hover:bg-slate-50 hover:text-[#002190] transition">Our Values</a>
-                <a href="https://srhin.org/leadership-team/" class="block px-4 py-2.5 text-sm hover:bg-slate-50 hover:text-[#002190] transition">Our Team</a>
-                <a href="https://srhin.org/global-advisory-board/" class="block px-4 py-2.5 text-sm hover:bg-slate-50 hover:text-[#002190] transition">Global Advisory Board</a>
-                <a href="https://srhin.org/anthem-and-pledge/" class="block px-4 py-2.5 text-sm hover:bg-slate-50 hover:text-[#002190] transition">Our Voice &amp; Commitment</a>
-              </div>
-            </div>
-          </div>
-
-          <!-- Dropdown: Work With Us -->
-          <div class="relative group">
-            <button type="button" class="inline-flex items-center gap-1 px-3.5 py-2 rounded-lg group-hover:text-[#002190] transition">
-              <span>Work With Us</span>
-              <span class="material-symbols-outlined text-base transition-transform group-hover:rotate-180 duration-200">expand_more</span>
-            </button>
-            <div class="absolute left-0 top-full hidden group-hover:block group-focus-within:block w-52 pt-2 z-50">
-              <div class="bg-white border border-slate-200 rounded-2xl shadow-xl py-2 overflow-hidden">
-                <a href="https://srhin.org/our-work/" class="block px-4 py-2.5 text-sm hover:bg-slate-50 hover:text-[#002190] transition">Our Work</a>
-                <a href="https://srhin.org/career/" class="block px-4 py-2.5 text-sm hover:bg-slate-50 hover:text-[#002190] transition">Join Our Team</a>
-                <a href="https://srhin.org/partner-with-us/" class="block px-4 py-2.5 text-sm hover:bg-slate-50 hover:text-[#002190] transition">Partner With Us</a>
-              </div>
-            </div>
-          </div>
-
-          <!-- Dropdown: Insights & Impact -->
-          <div class="relative group">
-            <button type="button" class="inline-flex items-center gap-1 px-3.5 py-2 rounded-lg group-hover:text-[#002190] transition">
-              <span>Insights &amp; Impact</span>
-              <span class="material-symbols-outlined text-base transition-transform group-hover:rotate-180 duration-200">expand_more</span>
-            </button>
-            <div class="absolute left-0 top-full hidden group-hover:block group-focus-within:block w-52 pt-2 z-50">
-              <div class="bg-white border border-slate-200 rounded-2xl shadow-xl py-2 overflow-hidden">
-                <a href="https://srhin.org/our-impact/" class="block px-4 py-2.5 text-sm hover:bg-slate-50 hover:text-[#002190] transition">Our Impact</a>
-                <a href="https://srhin.org/blog-database/" class="block px-4 py-2.5 text-sm hover:bg-slate-50 hover:text-[#002190] transition">News &amp; Blog</a>
-                <a href="https://srhin.org/stories-of-impact/" class="block px-4 py-2.5 text-sm hover:bg-slate-50 hover:text-[#002190] transition">Stories of Impact</a>
-              </div>
-            </div>
-          </div>
-
-          <!-- Dropdown: Research Centers (PRIME Active) -->
-          <div class="relative group">
-            <button type="button" class="inline-flex items-center gap-1 px-3.5 py-2 rounded-lg group-hover:text-[#002190] transition">
-              <span>Research Centers</span>
-              <span class="material-symbols-outlined text-base transition-transform group-hover:rotate-180 duration-200">expand_more</span>
-            </button>
-            <div class="absolute left-0 top-full hidden group-hover:block group-focus-within:block w-56 pt-2 z-50">
-              <div class="bg-white border border-slate-200 rounded-2xl shadow-xl py-2 overflow-hidden">
-                <a href="https://alpha.srhin.org" class="block px-4 py-2.5 text-sm hover:bg-slate-50 hover:text-[#002190] transition">ALPHA</a>
-                <a href="https://prime.srhin.org" class="block px-4 py-2.5 text-sm hover:bg-slate-50 hover:text-[#002190] font-semibold text-[#002190] transition">PRIME</a>
-                <a href="https://mhile.srhin.org" class="block px-4 py-2.5 text-sm hover:bg-slate-50 hover:text-[#002190] transition">MHILE</a>
-                <a href="https://cohazd.srhin.org" class="block px-4 py-2.5 text-sm hover:bg-slate-50 hover:text-[#002190] transition">COHAZD</a>
-                <a href="https://cempher.srhin.org" class="block px-4 py-2.5 text-sm hover:bg-slate-50 hover:text-[#002190] transition">CEMPHER</a>
-              </div>
-            </div>
-          </div>
-
-          <a href="https://srhin.org/contact-us/" class="px-3.5 py-2 rounded-lg hover:text-[#002190] transition">Contact</a>
+          <a href="https://prime.srhin.org" class="px-3.5 py-2 rounded-lg hover:text-[#002190] transition">Home</a>
+          <a href="https://prime.srhin.org/#about" class="px-3.5 py-2 rounded-lg hover:text-[#002190] transition">About</a>
+          <a href="https://prime.srhin.org/#mission" class="px-3.5 py-2 rounded-lg hover:text-[#002190] transition">Mission</a>
+          <a href="#programs-grid" class="px-3.5 py-2 rounded-lg font-semibold text-[#002190] transition">Programs</a>
+          <a href="https://prime.srhin.org/#focus-areas" class="px-3.5 py-2 rounded-lg hover:text-[#002190] transition">Focus Areas</a>
+          <a href="https://prime.srhin.org/#insights" class="px-3.5 py-2 rounded-lg hover:text-[#002190] transition">Insights</a>
+          <a href="https://prime.srhin.org/#team" class="px-3.5 py-2 rounded-lg hover:text-[#002190] transition">Team</a>
+          <a href="#contact" class="px-3.5 py-2 rounded-lg hover:text-[#002190] transition">Contact</a>
         </nav>
 
-        <!-- Right: Donate CTA Button & Mobile Trigger -->
+        <!-- Right: Contact CTA Button -->
         <div class="flex items-center gap-3">
-          <a href="https://srhin.org/donate/" class="hidden sm:inline-flex items-center justify-center bg-[#002190] hover:bg-[#001766] text-white font-semibold text-sm px-5 py-2.5 rounded-full transition duration-150 shadow-sm">
-            Donate Now
+          <a href="mailto:hello@srhin.org" class="hidden sm:inline-flex items-center justify-center bg-[#002190] hover:bg-[#001766] text-white font-semibold text-sm px-5 py-2.5 rounded-full transition duration-150 shadow-sm">
+            Contact Center
           </a>
 
           <button type="button" id="srhinMobileToggle" aria-label="Toggle Navigation Menu" class="lg:hidden p-2 rounded-lg text-slate-700 hover:bg-slate-100 transition focus:outline-none">
@@ -347,376 +96,198 @@
 
     <!-- Mobile Drawer Menu -->
     <div id="srhinMobileMenu" class="hidden lg:hidden border-t border-slate-200 bg-white px-6 py-6 space-y-4 font-body text-base max-h-[85vh] overflow-y-auto shadow-xl">
-      <a href="https://srhin.org/" class="block font-medium py-2 border-b border-slate-100">Home</a>
-
-      <details class="group border-b border-slate-100 pb-2">
-        <summary class="flex justify-between items-center py-2 font-medium cursor-pointer list-none">
-          <span>About Us</span>
-          <span class="material-symbols-outlined group-open:rotate-180 transition">expand_more</span>
-        </summary>
-        <div class="pl-4 py-2 space-y-2 text-sm text-slate-600">
-          <a href="https://srhin.org/our-values/" class="block py-1 hover:text-[#002190]">Our Values</a>
-          <a href="https://srhin.org/leadership-team/" class="block py-1 hover:text-[#002190]">Our Team</a>
-          <a href="https://srhin.org/global-advisory-board/" class="block py-1 hover:text-[#002190]">Global Advisory Board</a>
-          <a href="https://srhin.org/anthem-and-pledge/" class="block py-1 hover:text-[#002190]">Our Voice &amp; Commitment</a>
-        </div>
-      </details>
-
-      <details class="group border-b border-slate-100 pb-2">
-        <summary class="flex justify-between items-center py-2 font-medium cursor-pointer list-none">
-          <span>Work With Us</span>
-          <span class="material-symbols-outlined group-open:rotate-180 transition">expand_more</span>
-        </summary>
-        <div class="pl-4 py-2 space-y-2 text-sm text-slate-600">
-          <a href="https://srhin.org/our-work/" class="block py-1 hover:text-[#002190]">Our Work</a>
-          <a href="https://srhin.org/career/" class="block py-1 hover:text-[#002190]">Join Our Team</a>
-          <a href="https://srhin.org/partner-with-us/" class="block py-1 hover:text-[#002190]">Partner With Us</a>
-        </div>
-      </details>
-
-      <details class="group border-b border-slate-100 pb-2">
-        <summary class="flex justify-between items-center py-2 font-medium cursor-pointer list-none">
-          <span>Insights &amp; Impact</span>
-          <span class="material-symbols-outlined group-open:rotate-180 transition">expand_more</span>
-        </summary>
-        <div class="pl-4 py-2 space-y-2 text-sm text-slate-600">
-          <a href="https://srhin.org/our-impact/" class="block py-1 hover:text-[#002190]">Our Impact</a>
-          <a href="https://srhin.org/blog-database/" class="block py-1 hover:text-[#002190]">News &amp; Blog</a>
-          <a href="https://srhin.org/stories-of-impact/" class="block py-1 hover:text-[#002190]">Stories of Impact</a>
-        </div>
-      </details>
-
-      <details class="group border-b border-slate-100 pb-2">
-        <summary class="flex justify-between items-center py-2 font-medium cursor-pointer list-none">
-          <span>Research Centers</span>
-          <span class="material-symbols-outlined group-open:rotate-180 transition">expand_more</span>
-        </summary>
-        <div class="pl-4 py-2 space-y-2 text-sm text-slate-600">
-          <a href="https://alpha.srhin.org" class="block py-1 hover:text-[#002190]">ALPHA</a>
-          <a href="https://prime.srhin.org" class="block py-1 font-semibold text-[#002190]">PRIME</a>
-          <a href="https://mhile.srhin.org" class="block py-1 hover:text-[#002190]">MHILE</a>
-          <a href="https://cohazd.srhin.org" class="block py-1 hover:text-[#002190]">COHAZD</a>
-          <a href="https://cempher.srhin.org" class="block py-1 hover:text-[#002190]">CEMPHER</a>
-        </div>
-      </details>
-
-      <a href="https://srhin.org/contact-us/" class="block font-medium py-2 border-b border-slate-100">Contact</a>
-
+      <a href="https://prime.srhin.org" class="block font-medium py-2 border-b border-slate-100">Home</a>
+      <a href="https://prime.srhin.org/#about" class="block font-medium py-2 border-b border-slate-100">About</a>
+      <a href="https://prime.srhin.org/#mission" class="block font-medium py-2 border-b border-slate-100">Mission</a>
+      <a href="#programs-grid" class="block font-semibold text-[#002190] py-2 border-b border-slate-100">Programs</a>
+      <a href="https://prime.srhin.org/#focus-areas" class="block font-medium py-2 border-b border-slate-100">Focus Areas</a>
+      <a href="https://prime.srhin.org/#insights" class="block font-medium py-2 border-b border-slate-100">Insights</a>
+      <a href="https://prime.srhin.org/#team" class="block font-medium py-2 border-b border-slate-100">Team</a>
+      <a href="#contact" class="block font-medium py-2 border-b border-slate-100">Contact</a>
+      
       <div class="pt-2">
-        <a href="https://srhin.org/donate/" class="w-full inline-flex items-center justify-center bg-[#002190] hover:bg-[#001766] text-white font-semibold text-sm px-5 py-3 rounded-full transition duration-150 shadow-sm">
-          Donate Now
+        <a href="mailto:hello@srhin.org" class="w-full inline-flex items-center justify-center bg-[#002190] hover:bg-[#001766] text-white font-semibold text-sm px-5 py-3 rounded-full transition duration-150 shadow-sm">
+          Contact Center
         </a>
       </div>
     </div>
   </header>
 
-<section class="py-24 px-6 max-w-6xl mx-auto space-y-12">
-
+  <!-- ========================================== -->
+  <!-- 2. PROGRAMS SUBPAGE GRID                   -->
+  <!-- ========================================== -->
+  <section id="programs-grid" class="py-24 px-6 max-w-6xl mx-auto space-y-12">
+    
     <!-- Section Header -->
     <div class="text-center max-w-2xl mx-auto space-y-4">
-      <span class="inline-block text-xs font-mono uppercase tracking-[0.2em] text-blue-600">
-        Programs &amp; Initiatives
+      <span class="inline-block text-xs font-mono uppercase tracking-[0.2em] text-[#002190]">
+        All Programs &amp; Initiatives
       </span>
-  
-      <h2 class="text-3xl sm:text-4xl font-heading font-semibold text-slate-900">
-        Explore some of our impactful and life-changing programs
-      </h2>
+      <h1 class="text-3xl sm:text-5xl font-heading font-semibold text-slate-900">
+        Impact in Action
+      </h1>
+      <p class="text-slate-600 font-body text-base">
+        Explore our complete portfolio of life-changing programs, research deployments, and community-led health interventions.
+      </p>
     </div>
   
     <!-- Programs Grid -->
     <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
   
       <!-- INCLUDE Project -->
-      <article
-        class="relative rounded-3xl overflow-hidden shadow-md min-h-[300px] flex flex-col justify-between p-7 bg-slate-900"
-        style="background-image: url('https://srhin.org/wp-content/uploads/2025/06/MUK7084-scaled.jpg'); background-size: cover; background-position: center;"
-      >
+      <article class="relative rounded-3xl overflow-hidden shadow-md min-h-[300px] flex flex-col justify-between p-7 bg-slate-900" style="background-image: url('https://srhin.org/wp-content/uploads/2025/06/MUK7084-scaled.jpg'); background-size: cover; background-position: center;">
         <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-900/85 to-slate-900/70"></div>
-  
         <div class="relative z-10 flex flex-col h-full justify-between">
           <div>
-            <span class="text-xs font-mono uppercase tracking-wider text-blue-300">
-              Program
-            </span>
-  
-            <h3 class="mt-3 text-xl font-heading font-semibold text-white">
-              The INCLUDE Project
-            </h3>
-  
+            <span class="text-xs font-mono uppercase tracking-wider text-blue-300">Program</span>
+            <h3 class="mt-3 text-xl font-heading font-semibold text-white">The INCLUDE Project</h3>
             <p class="mt-2 text-slate-200 text-xs sm:text-sm leading-relaxed font-body">
-              The INCLUDE Project aims to improve access to HIV self-testing (HIVST)
-              and prevention services for young people, especially those living with
-              disabilities (PWDs), in Nigeria.
+              The INCLUDE Project aims to improve access to HIV self-testing (HIVST) and prevention services for young people, especially those living with disabilities (PWDs), in Nigeria.
             </p>
           </div>
-  
-          <a
-            href="https://srhin.org/our-project/include-project/"
-            class="inline-flex items-center gap-2 self-start mt-6 px-5 py-2.5 rounded-full bg-[#002190] hover:bg-[#001766] text-white text-sm font-semibold transition-colors"
-          >
-            Learn More
+          <a href="https://srhin.org/our-project/include-project/" target="_blank" rel="noopener" class="inline-flex items-center gap-2 self-start mt-6 px-5 py-2.5 rounded-full bg-[#002190] hover:bg-[#001766] text-white text-sm font-semibold transition-colors">
+            <span>Learn More</span>
             <span class="material-symbols-outlined text-base">north_east</span>
           </a>
         </div>
       </article>
-  
-  
+ 
       <!-- MamaKid Project -->
-      <article
-        class="relative rounded-3xl overflow-hidden shadow-md min-h-[300px] flex flex-col justify-between p-7 bg-slate-900"
-        style="background-image: url('https://srhin.org/wp-content/uploads/2026/02/unnamed.jpg'); background-size: cover; background-position: center;"
-      >
+      <article class="relative rounded-3xl overflow-hidden shadow-md min-h-[300px] flex flex-col justify-between p-7 bg-slate-900" style="background-image: url('https://srhin.org/wp-content/uploads/2026/02/unnamed.jpg'); background-size: cover; background-position: center;">
         <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-900/85 to-slate-900/70"></div>
-  
         <div class="relative z-10 flex flex-col h-full justify-between">
           <div>
-            <span class="text-xs font-mono uppercase tracking-wider text-blue-300">
-              Program
-            </span>
-  
-            <h3 class="mt-3 text-xl font-heading font-semibold text-white">
-              MamaKid Project
-            </h3>
-  
+            <span class="text-xs font-mono uppercase tracking-wider text-blue-300">Program</span>
+            <h3 class="mt-3 text-xl font-heading font-semibold text-white">MamaKid Project</h3>
             <p class="mt-2 text-slate-200 text-xs sm:text-sm leading-relaxed font-body">
-              Our innovative transformative solution leveraging a community-led,
-              human-centerd design and gender transfornative approach to reduce
-              maternal and neonatal mortality.
+              Our innovative transformative solution leveraging a community-led, human-centered design and gender transformative approach to reduce maternal and neonatal mortality.
             </p>
           </div>
-  
-          <a
-            href="https://srhin.org/our-project/mamakid-project/"
-            class="inline-flex items-center gap-2 self-start mt-6 px-5 py-2.5 rounded-full bg-[#002190] hover:bg-[#001766] text-white text-sm font-semibold transition-colors"
-          >
-            Learn More
+          <a href="https://srhin.org/our-project/mamakid-project/" target="_blank" rel="noopener" class="inline-flex items-center gap-2 self-start mt-6 px-5 py-2.5 rounded-full bg-[#002190] hover:bg-[#001766] text-white text-sm font-semibold transition-colors">
+            <span>Learn More</span>
             <span class="material-symbols-outlined text-base">north_east</span>
           </a>
         </div>
       </article>
-  
-  
+ 
       <!-- IMPACT Project -->
-      <article
-        class="relative rounded-3xl overflow-hidden shadow-md min-h-[300px] flex flex-col justify-between p-7 bg-slate-900"
-        style="background-image: url('https://srhin.org/wp-content/uploads/2026/02/IMG_9744.jpg'); background-size: cover; background-position: center;"
-      >
+      <article class="relative rounded-3xl overflow-hidden shadow-md min-h-[300px] flex flex-col justify-between p-7 bg-slate-900" style="background-image: url('https://srhin.org/wp-content/uploads/2026/02/IMG_9744.jpg'); background-size: cover; background-position: center;">
         <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-900/85 to-slate-900/70"></div>
-  
         <div class="relative z-10 flex flex-col h-full justify-between">
           <div>
-            <span class="text-xs font-mono uppercase tracking-wider text-blue-300">
-              Program
-            </span>
-  
-            <h3 class="mt-3 text-xl font-heading font-semibold text-white">
-              The IMPACT Project
-            </h3>
-  
+            <span class="text-xs font-mono uppercase tracking-wider text-blue-300">Program</span>
+            <h3 class="mt-3 text-xl font-heading font-semibold text-white">The IMPACT Project</h3>
             <p class="mt-2 text-slate-200 text-xs sm:text-sm leading-relaxed font-body">
-              The IMPACT Project aims to reduce HIV infections and improve testing
-              uptake through youth-led, community-based interventions. This would be
-              achieved through empowering adolescents and young adults in IDP camps
-              with HIV knowledge to lead community campaigns.
+              The IMPACT Project aims to reduce HIV infections and improve testing uptake through youth-led, community-based interventions in IDP camps.
             </p>
           </div>
-  
-          <a
-            href="https://srhin.org/projects-impact/"
-            class="inline-flex items-center gap-2 self-start mt-6 px-5 py-2.5 rounded-full bg-[#002190] hover:bg-[#001766] text-white text-sm font-semibold transition-colors"
-          >
-            Learn More
+          <a href="https://srhin.org/projects-impact/" target="_blank" rel="noopener" class="inline-flex items-center gap-2 self-start mt-6 px-5 py-2.5 rounded-full bg-[#002190] hover:bg-[#001766] text-white text-sm font-semibold transition-colors">
+            <span>Learn More</span>
             <span class="material-symbols-outlined text-base">north_east</span>
           </a>
         </div>
       </article>
-  
-  
+ 
       <!-- Community Against Sexual Violence -->
-      <article
-        class="relative rounded-3xl overflow-hidden shadow-md min-h-[300px] flex flex-col justify-between p-7 bg-slate-900"
-        style="background-image: url('https://srhin.org/wp-content/uploads/2023/02/GetPaidStock.com-63edf410a184f.jpg'); background-size: cover; background-position: center;"
-      >
+      <article class="relative rounded-3xl overflow-hidden shadow-md min-h-[300px] flex flex-col justify-between p-7 bg-slate-900" style="background-image: url('https://srhin.org/wp-content/uploads/2023/02/GetPaidStock.com-63edf410a184f.jpg'); background-size: cover; background-position: center;">
         <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-900/85 to-slate-900/70"></div>
-  
         <div class="relative z-10 flex flex-col h-full justify-between">
           <div>
-            <span class="text-xs font-mono uppercase tracking-wider text-blue-300">
-              Program
-            </span>
-  
-            <h3 class="mt-3 text-xl font-heading font-semibold text-white">
-              Community Against Sexual Violence
-            </h3>
-  
+            <span class="text-xs font-mono uppercase tracking-wider text-blue-300">Program</span>
+            <h3 class="mt-3 text-xl font-heading font-semibold text-white">Community Against Sexual Violence</h3>
             <p class="mt-2 text-slate-200 text-xs sm:text-sm leading-relaxed font-body">
-              Addressing sexual violence in Internally Displaced Persons(IDP) camps
-              through skill acquisition programs.
+              Addressing sexual violence in Internally Displaced Persons (IDP) camps through skill acquisition programs.
             </p>
           </div>
-  
-          <a
-            href="https://srhin.org/our-project/community-against-sexual-violence/"
-            class="inline-flex items-center gap-2 self-start mt-6 px-5 py-2.5 rounded-full bg-[#002190] hover:bg-[#001766] text-white text-sm font-semibold transition-colors"
-          >
-            Learn More
+          <a href="https://srhin.org/our-project/community-against-sexual-violence/" target="_blank" rel="noopener" class="inline-flex items-center gap-2 self-start mt-6 px-5 py-2.5 rounded-full bg-[#002190] hover:bg-[#001766] text-white text-sm font-semibold transition-colors">
+            <span>Learn More</span>
             <span class="material-symbols-outlined text-base">north_east</span>
           </a>
         </div>
       </article>
-  
-  
+ 
       <!-- HANDS Project -->
-      <article
-        class="relative rounded-3xl overflow-hidden shadow-md min-h-[300px] flex flex-col justify-between p-7 bg-slate-900"
-        style="background-image: url('https://srhin.org/wp-content/uploads/2022/09/final-dl.beatsnoop.com-9Cr2PfTRMh.jpg'); background-size: cover; background-position: center;"
-      >
+      <article class="relative rounded-3xl overflow-hidden shadow-md min-h-[300px] flex flex-col justify-between p-7 bg-slate-900" style="background-image: url('https://srhin.org/wp-content/uploads/2022/09/final-dl.beatsnoop.com-9Cr2PfTRMh.jpg'); background-size: cover; background-position: center;">
         <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-900/85 to-slate-900/70"></div>
-  
         <div class="relative z-10 flex flex-col h-full justify-between">
           <div>
-            <span class="text-xs font-mono uppercase tracking-wider text-blue-300">
-              Program
-            </span>
-  
-            <h3 class="mt-3 text-xl font-heading font-semibold text-white">
-              The HANDS Project
-            </h3>
-  
+            <span class="text-xs font-mono uppercase tracking-wider text-blue-300">Program</span>
+            <h3 class="mt-3 text-xl font-heading font-semibold text-white">The HANDS Project</h3>
             <p class="mt-2 text-slate-200 text-xs sm:text-sm leading-relaxed font-body">
-              Vulnerable children lack access to proper hand hygiene and good
-              hand-washing practices, which puts them at risk of contracting and
-              spreading infectious diseases.
+              Vulnerable children lack access to proper hand hygiene, putting them at risk of contracting and spreading infectious diseases.
             </p>
           </div>
-  
-          <a
-            href="https://srhin.org/our-project/hands-project/"
-            class="inline-flex items-center gap-2 self-start mt-6 px-5 py-2.5 rounded-full bg-[#002190] hover:bg-[#001766] text-white text-sm font-semibold transition-colors"
-          >
-            Learn More
+          <a href="https://srhin.org/our-project/hands-project/" target="_blank" rel="noopener" class="inline-flex items-center gap-2 self-start mt-6 px-5 py-2.5 rounded-full bg-[#002190] hover:bg-[#001766] text-white text-sm font-semibold transition-colors">
+            <span>Learn More</span>
             <span class="material-symbols-outlined text-base">north_east</span>
           </a>
         </div>
       </article>
-  
-  
+ 
       <!-- Dettol Quest -->
-      <article
-        class="relative rounded-3xl overflow-hidden shadow-md min-h-[300px] flex flex-col justify-between p-7 bg-slate-900"
-        style="background-image: url('https://srhin.org/wp-content/uploads/2024/02/blue_3d_geometric_square_pattern_background-scaled.jpg'); background-size: cover; background-position: center;"
-      >
+      <article class="relative rounded-3xl overflow-hidden shadow-md min-h-[300px] flex flex-col justify-between p-7 bg-slate-900" style="background-image: url('https://srhin.org/wp-content/uploads/2024/02/blue_3d_geometric_square_pattern_background-scaled.jpg'); background-size: cover; background-position: center;">
         <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-900/85 to-slate-900/70"></div>
-  
         <div class="relative z-10 flex flex-col h-full justify-between">
           <div>
-            <span class="text-xs font-mono uppercase tracking-wider text-blue-300">
-              Program
-            </span>
-  
-            <h3 class="mt-3 text-xl font-heading font-semibold text-white">
-              Dettol Quest
-            </h3>
-  
+            <span class="text-xs font-mono uppercase tracking-wider text-blue-300">Program</span>
+            <h3 class="mt-3 text-xl font-heading font-semibold text-white">Dettol Quest</h3>
             <p class="mt-2 text-slate-200 text-xs sm:text-sm leading-relaxed font-body">
-              The Dettol Quest Hygiene Programme Impact Assessment aimed at examining
-              the impact of an innovative hygiene intervention on the knowledge,
-              attitude, behavior, and practices toward proper sanitation and hygiene
-              in schools, communities, and healthcare facilities in Lagos, Kwara and Abuja.
+              Examining the impact of innovative hygiene intervention on sanitation and hygiene practices in schools and communities across Lagos, Kwara and Abuja.
             </p>
           </div>
-  
-          <a
-            href="https://srhin.org/dettol-quest-project/"
-            class="inline-flex items-center gap-2 self-start mt-6 px-5 py-2.5 rounded-full bg-[#002190] hover:bg-[#001766] text-white text-sm font-semibold transition-colors"
-          >
-            Learn More
+          <a href="https://srhin.org/dettol-quest-project/" target="_blank" rel="noopener" class="inline-flex items-center gap-2 self-start mt-6 px-5 py-2.5 rounded-full bg-[#002190] hover:bg-[#001766] text-white text-sm font-semibold transition-colors">
+            <span>Learn More</span>
             <span class="material-symbols-outlined text-base">north_east</span>
           </a>
         </div>
       </article>
-  
-  
+ 
       <!-- Stop COVID-19 -->
-      <article
-        class="relative rounded-3xl overflow-hidden shadow-md min-h-[300px] flex flex-col justify-between p-7 bg-slate-900"
-        style="background-image: url('https://srhin.org/wp-content/uploads/2020/09/ENGLISH-1.png'); background-size: cover; background-position: center;"
-      >
+      <article class="relative rounded-3xl overflow-hidden shadow-md min-h-[300px] flex flex-col justify-between p-7 bg-slate-900" style="background-image: url('https://srhin.org/wp-content/uploads/2020/09/ENGLISH-1.png'); background-size: cover; background-position: center;">
         <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-900/85 to-slate-900/70"></div>
-  
         <div class="relative z-10 flex flex-col h-full justify-between">
           <div>
-            <span class="text-xs font-mono uppercase tracking-wider text-blue-300">
-              Program
-            </span>
-  
-            <h3 class="mt-3 text-xl font-heading font-semibold text-white">
-              Stop COVID-19
-            </h3>
-  
+            <span class="text-xs font-mono uppercase tracking-wider text-blue-300">Program</span>
+            <h3 class="mt-3 text-xl font-heading font-semibold text-white">Stop COVID-19</h3>
             <p class="mt-2 text-slate-200 text-xs sm:text-sm leading-relaxed font-body">
-              We have reached millions of vulnerable people with COVID-19 prevention
-              information by translating and sharing evidence-based public health
-              messages in over 100 languages!
+              We reached millions of vulnerable people with COVID-19 prevention information by sharing public health messages in over 100 languages.
             </p>
           </div>
-  
-          <a
-            href="https://srhin.org/our-project/covid-19-project/"
-            class="inline-flex items-center gap-2 self-start mt-6 px-5 py-2.5 rounded-full bg-[#002190] hover:bg-[#001766] text-white text-sm font-semibold transition-colors"
-          >
-            Learn More
+          <a href="https://srhin.org/our-project/covid-19-project/" target="_blank" rel="noopener" class="inline-flex items-center gap-2 self-start mt-6 px-5 py-2.5 rounded-full bg-[#002190] hover:bg-[#001766] text-white text-sm font-semibold transition-colors">
+            <span>Learn More</span>
             <span class="material-symbols-outlined text-base">north_east</span>
           </a>
         </div>
       </article>
-  
-  
+ 
       <!-- Eradicate Hepatitis B -->
-      <article
-        class="relative rounded-3xl overflow-hidden shadow-md min-h-[300px] flex flex-col justify-between p-7 bg-slate-900"
-        style="background-image: url('https://srhin.org/wp-content/uploads/2024/02/world-hepatitis-day-concept-with-medical-tools-pills-placed-gray-surface-1-1-scaled.jpg'); background-size: cover; background-position: center;"
-      >
+      <article class="relative rounded-3xl overflow-hidden shadow-md min-h-[300px] flex flex-col justify-between p-7 bg-slate-900" style="background-image: url('https://srhin.org/wp-content/uploads/2024/02/world-hepatitis-day-concept-with-medical-tools-pills-placed-gray-surface-1-1-scaled.jpg'); background-size: cover; background-position: center;">
         <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-900/85 to-slate-900/70"></div>
-  
         <div class="relative z-10 flex flex-col h-full justify-between">
           <div>
-            <span class="text-xs font-mono uppercase tracking-wider text-blue-300">
-              Program
-            </span>
-  
-            <h3 class="mt-3 text-xl font-heading font-semibold text-white">
-              Eradicate Hepatitis B
-            </h3>
-  
+            <span class="text-xs font-mono uppercase tracking-wider text-blue-300">Program</span>
+            <h3 class="mt-3 text-xl font-heading font-semibold text-white">Eradicate Hepatitis B</h3>
             <p class="mt-2 text-slate-200 text-xs sm:text-sm leading-relaxed font-body">
-              Combating Hepatitis B in Vulnerable and Historically Marginalized
-              Communities Through Education, Free Screening, Vaccination, and
-              Comprehensive Care for a Healthier Tomorrow
+              Combating Hepatitis B in marginalized communities through education, free screening, vaccination, and comprehensive care.
             </p>
           </div>
-  
-          <a
-            href="https://srhin.org/our-project/eradicating-hepatitisb-project/"
-            class="inline-flex items-center gap-2 self-start mt-6 px-5 py-2.5 rounded-full bg-[#002190] hover:bg-[#001766] text-white text-sm font-semibold transition-colors"
-          >
-            Learn More
+          <a href="https://srhin.org/our-project/eradicating-hepatitisb-project/" target="_blank" rel="noopener" class="inline-flex items-center gap-2 self-start mt-6 px-5 py-2.5 rounded-full bg-[#002190] hover:bg-[#001766] text-white text-sm font-semibold transition-colors">
+            <span>Learn More</span>
             <span class="material-symbols-outlined text-base">north_east</span>
           </a>
         </div>
       </article>
-  
+
     </div>
-  
   </section>
 
-    <!-- ========================================== -->
-  <!-- 9. PUBLIC HEALTH ALERT BAR                 -->
+  <!-- ========================================== -->
+  <!-- 3. PUBLIC HEALTH ALERT BAR                 -->
   <!-- ========================================== -->
   <div id="srhin-alert-container" style="display:none; width:100%; background-color:#003D7A; color:#ffffff; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif; font-size:13px; line-height:1.4; border-bottom:3px solid #59C5DC; position:relative; z-index:999999; box-shadow:0 2px 8px rgba(0,0,0,0.15);" role="region" aria-label="Public Health Alert">
     <div id="srhin-alert-wrapper" style="position:relative; max-width:1200px; margin:0 auto; box-sizing:border-box; padding:9px 45px 9px 20px;">
       <div id="srhin-content-box" style="line-height:1.5; margin:0; padding:0;">
-        <span id="srhin-alert-tag" style="background-color:#009900; color:#ffffff; font-weight:700; font-size:10px; text-transform:uppercase; letter-spacing:0.5px; padding:2px 8px; border-radius:20px; white-space:nowrap; display:inline-block; margin-right:14px; vertical-align:middle;"></span>
+        <span id="srhin-alert-tag" style="background-color:#002190; color:#ffffff; font-weight:700; font-size:10px; text-transform:uppercase; letter-spacing:0.5px; padding:2px 8px; border-radius:20px; white-space:nowrap; display:inline-block; margin-right:14px; vertical-align:middle;"></span>
         <span id="srhin-alert-msg" style="font-weight:500; color:#F0F4F8; display:inline;"></span>
         <button type="button" id="srhin-fact-toggle" aria-expanded="false" style="background:none; border:none; color:#59C5DC; font-size:12px; font-weight:600; cursor:pointer; padding:0 0 0 6px; text-decoration:none !important; white-space:nowrap; display:inline; outline:none; vertical-align:baseline; font-family:inherit;">Quick Fact &#9662;</button>
       </div>
@@ -752,9 +323,9 @@
   </style>
 
   <!-- ========================================== -->
-  <!-- 10. OFFICIAL SRHIN FOOTER                  -->
+  <!-- 4. OFFICIAL SRHIN FOOTER                   -->
   <!-- ========================================== -->
-  <footer class="bg-white border-t border-slate-200 text-slate-700 font-sans text-sm">
+  <footer id="contact" class="bg-white border-t border-slate-200 text-slate-700 font-sans text-sm">
     <div class="max-w-7xl mx-auto px-6 py-16">
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-10">
         
@@ -859,7 +430,7 @@
   </div>
 
   <!-- ========================================== -->
-  <!-- 11. SCRIPTS & INTERACTION LOGIC            -->
+  <!-- 5. SCRIPTS & INTERACTION LOGIC             -->
   <!-- ========================================== -->
 
   <!-- Header Interactive JS -->
@@ -897,191 +468,6 @@
         hamburgerIcon.textContent = isClosed ? 'close' : 'menu';
       });
     }
-  </script>
-
-  <!-- Team Carousel Script -->
-  <script>
-    (function() {
-      const section = document.getElementById('srhinTeamCarousel');
-      const viewport = document.getElementById('srhinViewport');
-      const track = document.getElementById('srhinTrack');
-      const prevBtn = document.getElementById('srhinPrevBtn');
-      const nextBtn = document.getElementById('srhinNextBtn');
-      const originalCards = Array.from(track.querySelectorAll('.srhin-team-card'));
-      const dotsContainer = document.getElementById('srhinDots');
-
-      if (!section || !viewport || !track || originalCards.length === 0) return;
-
-      const originalCount = originalCards.length;
-
-      const firstClone = originalCards[0].cloneNode(true);
-      const lastClone = originalCards[originalCount - 1].cloneNode(true);
-
-      track.appendChild(firstClone);
-      track.insertBefore(lastClone, originalCards[0]);
-
-      const allCards = track.querySelectorAll('.srhin-team-card');
-      let currentIndex = 1;
-      let isTransitioning = false;
-
-      for (let i = 0; i < originalCount; i++) {
-        const dot = document.createElement('button');
-        dot.classList.add('srhin-dot');
-        if (i === 0) dot.classList.add('active');
-        dot.setAttribute('aria-label', `Slide ${i + 1}`);
-        dot.addEventListener('click', () => {
-          if (isTransitioning) return;
-          goToSlide(i + 1);
-          resetAutoPlay();
-        });
-        dotsContainer.appendChild(dot);
-      }
-
-      const dots = dotsContainer.querySelectorAll('.srhin-dot');
-
-      function updateCardStates(activeIdx) {
-        allCards.forEach((card, idx) => {
-          if (idx === activeIdx) card.classList.add('is-active');
-          else card.classList.remove('is-active');
-        });
-      }
-
-      function updateDots(originalIdx) {
-        dots.forEach((dot, idx) => {
-          if (idx === originalIdx) dot.classList.add('active');
-          else dot.classList.remove('active');
-        });
-      }
-
-      function getVisibleCount() {
-        if (window.innerWidth >= 1024) return 3;
-        if (window.innerWidth >= 640) return 2;
-        return 1;
-      }
-
-      function setTransform(index, withTransition = true) {
-        const visible = getVisibleCount();
-        const slidePercent = 100 / visible;
-        
-        let offset;
-        if (visible === 3) offset = (index - 1) * slidePercent;
-        else if (visible === 2) offset = (index - 0.5) * slidePercent;
-        else offset = index * slidePercent;
-
-        track.style.transition = withTransition ? 'transform 0.5s cubic-bezier(0.16, 1, 0.3, 1)' : 'none';
-        track.style.transform = `translateX(-${offset}%)`;
-      }
-
-      function goToSlide(index, withTransition = true) {
-        isTransitioning = true;
-        currentIndex = index;
-
-        setTransform(currentIndex, withTransition);
-        updateCardStates(currentIndex);
-
-        let dotIndex = (currentIndex - 1 + originalCount) % originalCount;
-        updateDots(dotIndex);
-
-        setTimeout(() => {
-          if (currentIndex === 0) {
-            currentIndex = originalCount;
-            setTransform(currentIndex, false);
-            updateCardStates(currentIndex);
-          } else if (currentIndex === originalCount + 1) {
-            currentIndex = 1;
-            setTransform(currentIndex, false);
-            updateCardStates(currentIndex);
-          }
-          isTransitioning = false;
-        }, withTransition ? 500 : 0);
-      }
-
-      if (nextBtn) {
-        nextBtn.addEventListener('click', () => {
-          if (isTransitioning) return;
-          goToSlide(currentIndex + 1);
-          resetAutoPlay();
-        });
-      }
-
-      if (prevBtn) {
-        prevBtn.addEventListener('click', () => {
-          if (isTransitioning) return;
-          goToSlide(currentIndex - 1);
-          resetAutoPlay();
-        });
-      }
-
-      // Touch & Mouse Drag Handlers
-      let isDragging = false;
-      let startX = 0;
-      let currentX = 0;
-      let dragDistance = 0;
-      let hasMoved = false;
-
-      function handleDragStart(e) {
-        if (isTransitioning) return;
-        isDragging = true;
-        hasMoved = false;
-        dragDistance = 0;
-        startX = e.type.includes('touch') ? e.touches[0].clientX : e.clientX;
-        viewport.classList.add('is-dragging');
-        clearInterval(autoPlayInterval);
-      }
-
-      function handleDragMove(e) {
-        if (!isDragging) return;
-        currentX = e.type.includes('touch') ? e.touches[0].clientX : e.clientX;
-        dragDistance = currentX - startX;
-        if (Math.abs(dragDistance) > 10) hasMoved = true;
-      }
-
-      function handleDragEnd() {
-        if (!isDragging) return;
-        isDragging = false;
-        viewport.classList.remove('is-dragging');
-
-        const threshold = 35;
-        if (dragDistance < -threshold) goToSlide(currentIndex + 1);
-        else if (dragDistance > threshold) goToSlide(currentIndex - 1);
-        else setTransform(currentIndex, true);
-        resetAutoPlay();
-      }
-
-      viewport.addEventListener('click', (e) => {
-        if (hasMoved) {
-          e.preventDefault();
-          e.stopPropagation();
-        }
-      }, true);
-
-      viewport.addEventListener('mousedown', handleDragStart);
-      window.addEventListener('mousemove', handleDragMove);
-      window.addEventListener('mouseup', handleDragEnd);
-
-      viewport.addEventListener('touchstart', handleDragStart, { passive: true });
-      window.addEventListener('touchmove', handleDragMove, { passive: true });
-      window.addEventListener('touchend', handleDragEnd);
-
-      let autoPlayInterval = setInterval(() => {
-        if (!isTransitioning && !isDragging) goToSlide(currentIndex + 1);
-      }, 4000);
-
-      function resetAutoPlay() {
-        clearInterval(autoPlayInterval);
-        autoPlayInterval = setInterval(() => {
-          if (!isTransitioning && !isDragging) goToSlide(currentIndex + 1);
-        }, 4000);
-      }
-
-      section.addEventListener('mouseenter', () => clearInterval(autoPlayInterval));
-      section.addEventListener('mouseleave', () => resetAutoPlay());
-      window.addEventListener('resize', () => setTransform(currentIndex, false));
-
-      setTransform(1, false);
-      updateCardStates(1);
-      updateDots(0);
-    })();
   </script>
 
   <!-- Alert Bar API Script -->
@@ -1162,6 +548,75 @@
     });
     scrollTopBtn.addEventListener('click', () => {
       window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  </script>
+
+  <!-- Dynamic WordPress PRIME Blog Fetcher (4 Posts) -->
+  <script>
+    document.addEventListener("DOMContentLoaded", async function () {
+      const gridContainer = document.getElementById("prime-dynamic-blogs-grid");
+      const moreBtnWrapper = document.getElementById("prime-more-blogs-btn-wrapper");
+      
+      if (!gridContainer) return;
+
+      try {
+        const catResponse = await fetch("https://srhin.org/wp-json/wp/v2/categories?slug=prime");
+        const categories = await catResponse.json();
+        
+        let categoryParam = "";
+        if (categories && categories.length > 0) {
+          categoryParam = `&categories=${categories[0].id}`;
+        }
+
+        const postsResponse = await fetch(`https://srhin.org/wp-json/wp/v2/posts?per_page=4${categoryParam}&_embed=true`);
+        const posts = await postsResponse.json();
+
+        if (!posts || posts.length === 0) {
+          gridContainer.innerHTML = `<div class="col-span-full text-center py-10 text-slate-500 text-sm font-body">No recent blog posts found for PRIME at the moment.</div>`;
+          return;
+        }
+
+        gridContainer.innerHTML = "";
+        
+        posts.forEach(post => {
+          let imageUrl = "https://srhin.org/wp-content/uploads/2026/04/WhatsApp-Image-2026-04-14-at-09.35.54.jpeg";
+          if (post._embedded && post._embedded['wp:featuredmedia'] && post._embedded['wp:featuredmedia'][0].source_url) {
+            imageUrl = post._embedded['wp:featuredmedia'][0].source_url;
+          }
+
+          const articleHTML = `
+            <article class="bg-white rounded-3xl border border-slate-200 overflow-hidden shadow-sm flex flex-col justify-between p-6 space-y-5">
+              <div class="h-52 w-full rounded-2xl overflow-hidden bg-slate-100">
+                <img src="${imageUrl}" alt="${post.title.rendered}" class="w-full h-full object-cover">
+              </div>
+              <div class="space-y-2">
+                <span class="text-xs text-slate-400 font-semibold uppercase">PRIME Insights</span>
+                <h3 class="text-xl font-heading font-semibold text-slate-900 leading-snug">
+                  <a href="${post.link}" target="_blank" rel="noopener" class="hover:text-[#002190] transition">
+                    ${post.title.rendered}
+                  </a>
+                </h3>
+              </div>
+              <div>
+                <a href="${post.link}" target="_blank" rel="noopener" class="inline-flex items-center gap-1.5 text-xs font-semibold text-[#002190] hover:underline">
+                  <span>Read More</span>
+                  <span class="material-symbols-outlined text-sm">north_east</span>
+                </a>
+              </div>
+            </article>
+          `;
+
+          gridContainer.insertAdjacentHTML('beforeend', articleHTML);
+        });
+
+        if (moreBtnWrapper) {
+          moreBtnWrapper.classList.remove('hidden');
+        }
+
+      } catch (error) {
+        console.error("Error fetching dynamic PRIME blogs:", error);
+        gridContainer.innerHTML = `<div class="col-span-full text-center py-10 text-slate-500 text-sm font-body">Unable to load latest posts. Please visit our <a href="https://srhin.org/blog-database/?category=prime" class="text-[#002190] underline font-semibold">Blog Database</a>.</div>`;
+      }
     });
   </script>
 
