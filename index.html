@@ -232,6 +232,47 @@
 <body>
 
   <!-- ========================================== -->
+  <!-- 9. PUBLIC HEALTH ALERT BAR                 -->
+  <!-- ========================================== -->
+  <div id="srhin-alert-container" style="display:none; width:100%; background-color:#003D7A; color:#ffffff; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif; font-size:13px; line-height:1.4; border-bottom:3px solid #59C5DC; position:relative; z-index:999999; box-shadow:0 2px 8px rgba(0,0,0,0.15);" role="region" aria-label="Public Health Alert">
+    <div id="srhin-alert-wrapper" style="position:relative; max-width:1200px; margin:0 auto; box-sizing:border-box; padding:9px 45px 9px 20px;">
+      <div id="srhin-content-box" style="line-height:1.5; margin:0; padding:0;">
+        <span id="srhin-alert-tag" style="background-color:#009900; color:#ffffff; font-weight:700; font-size:10px; text-transform:uppercase; letter-spacing:0.5px; padding:2px 8px; border-radius:20px; white-space:nowrap; display:inline-block; margin-right:14px; vertical-align:middle;"></span>
+        <span id="srhin-alert-msg" style="font-weight:500; color:#F0F4F8; display:inline;"></span>
+        <button type="button" id="srhin-fact-toggle" aria-expanded="false" style="background:none; border:none; color:#59C5DC; font-size:12px; font-weight:600; cursor:pointer; padding:0 0 0 6px; text-decoration:none !important; white-space:nowrap; display:inline; outline:none; vertical-align:baseline; font-family:inherit;">Quick Fact &#9662;</button>
+      </div>
+
+      <div id="srhin-action-wrapper" style="display:none; margin-top:6px;">
+        <a href="#" id="srhin-alert-cta" style="background-color:#59C5DC; color:#003D7A !important; text-decoration:none !important; font-weight:600; font-size:11px; padding:4px 10px; border-radius:4px; display:inline-block; white-space:nowrap;"></a>
+      </div>
+
+      <button type="button" id="srhin-alert-close" aria-label="Dismiss banner" style="position:absolute; top:7px; right:8px; background:none; border:none; color:#ffffff; font-size:22px; cursor:pointer; line-height:1; padding:2px 6px; opacity:0.8; outline:none;">&times;</button>
+    </div>
+    
+    <div id="srhin-alert-drawer" style="max-height:0; overflow:hidden; transition:max-height 0.3s ease-out; background-color:#002952; border-top:1px solid rgba(89,197,220,0.25);">
+      <div style="max-width:1200px; margin:0 auto; padding:10px 16px 14px;">
+        <p id="srhin-alert-fact" style="margin:0; font-size:12px; line-height:1.5; color:#D1E8F2;"></p>
+      </div>
+    </div>
+  </div>
+
+  <style>
+    @media screen and (max-width: 768px) {
+      #srhin-alert-wrapper { padding: 8px 36px 9px 14px !important; }
+      #srhin-alert-tag {
+        display: block !important;
+        width: fit-content !important;
+        margin-bottom: 5px !important;
+        margin-right: 0 !important;
+        font-size: 9px !important;
+        padding: 2px 7px !important;
+      }
+      #srhin-alert-msg { font-size: 12px !important; line-height: 1.4 !important; }
+      #srhin-fact-toggle { font-size: 11px !important; }
+    }
+  </style>
+
+  <!-- ========================================== -->
   <!-- 1. CLEANED PRIME HEADER                    -->
   <!-- ========================================== -->
   <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200 transition-all font-['Manrope',sans-serif]">
@@ -486,7 +527,7 @@
 
     <!-- See More Programs CTA -->
     <div class="text-center pt-4">
-      <a href="/program.html" class="inline-flex items-center gap-2 bg-[#002190] hover:bg-[#001766] text-white text-sm font-semibold px-6 py-3 rounded-full transition shadow-sm">
+      <a href="https://srhin.org/prime-center-programs/" class="inline-flex items-center gap-2 bg-[#002190] hover:bg-[#001766] text-white text-sm font-semibold px-6 py-3 rounded-full transition shadow-sm">
         <span>See More Programs</span>
         <span class="material-symbols-outlined text-base">north_east</span>
       </a>
@@ -703,48 +744,7 @@
   </section>
 
   <!-- ========================================== -->
-  <!-- 9. PUBLIC HEALTH ALERT BAR                 -->
-  <!-- ========================================== -->
-  <div id="srhin-alert-container" style="display:none; width:100%; background-color:#003D7A; color:#ffffff; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif; font-size:13px; line-height:1.4; border-bottom:3px solid #59C5DC; position:relative; z-index:999999; box-shadow:0 2px 8px rgba(0,0,0,0.15);" role="region" aria-label="Public Health Alert">
-    <div id="srhin-alert-wrapper" style="position:relative; max-width:1200px; margin:0 auto; box-sizing:border-box; padding:9px 45px 9px 20px;">
-      <div id="srhin-content-box" style="line-height:1.5; margin:0; padding:0;">
-        <span id="srhin-alert-tag" style="background-color:#009900; color:#ffffff; font-weight:700; font-size:10px; text-transform:uppercase; letter-spacing:0.5px; padding:2px 8px; border-radius:20px; white-space:nowrap; display:inline-block; margin-right:14px; vertical-align:middle;"></span>
-        <span id="srhin-alert-msg" style="font-weight:500; color:#F0F4F8; display:inline;"></span>
-        <button type="button" id="srhin-fact-toggle" aria-expanded="false" style="background:none; border:none; color:#59C5DC; font-size:12px; font-weight:600; cursor:pointer; padding:0 0 0 6px; text-decoration:none !important; white-space:nowrap; display:inline; outline:none; vertical-align:baseline; font-family:inherit;">Quick Fact &#9662;</button>
-      </div>
-
-      <div id="srhin-action-wrapper" style="display:none; margin-top:6px;">
-        <a href="#" id="srhin-alert-cta" style="background-color:#59C5DC; color:#003D7A !important; text-decoration:none !important; font-weight:600; font-size:11px; padding:4px 10px; border-radius:4px; display:inline-block; white-space:nowrap;"></a>
-      </div>
-
-      <button type="button" id="srhin-alert-close" aria-label="Dismiss banner" style="position:absolute; top:7px; right:8px; background:none; border:none; color:#ffffff; font-size:22px; cursor:pointer; line-height:1; padding:2px 6px; opacity:0.8; outline:none;">&times;</button>
-    </div>
-    
-    <div id="srhin-alert-drawer" style="max-height:0; overflow:hidden; transition:max-height 0.3s ease-out; background-color:#002952; border-top:1px solid rgba(89,197,220,0.25);">
-      <div style="max-width:1200px; margin:0 auto; padding:10px 16px 14px;">
-        <p id="srhin-alert-fact" style="margin:0; font-size:12px; line-height:1.5; color:#D1E8F2;"></p>
-      </div>
-    </div>
-  </div>
-
-  <style>
-    @media screen and (max-width: 768px) {
-      #srhin-alert-wrapper { padding: 8px 36px 9px 14px !important; }
-      #srhin-alert-tag {
-        display: block !important;
-        width: fit-content !important;
-        margin-bottom: 5px !important;
-        margin-right: 0 !important;
-        font-size: 9px !important;
-        padding: 2px 7px !important;
-      }
-      #srhin-alert-msg { font-size: 12px !important; line-height: 1.4 !important; }
-      #srhin-fact-toggle { font-size: 11px !important; }
-    }
-  </style>
-
-  <!-- ========================================== -->
-  <!-- 10. OFFICIAL SRHIN FOOTER                  -->
+  <!-- 10. OFFICIAL SRHIN FOOTER (Cleaned Landing Page Style) -->
   <!-- ========================================== -->
   <footer id="contact" class="bg-white border-t border-slate-200 text-slate-700 font-sans text-sm">
     <div class="max-w-7xl mx-auto px-6 py-16">
@@ -752,25 +752,25 @@
         
         <!-- Brand & Mission Column -->
         <div class="sm:col-span-2 lg:col-span-4 space-y-6">
-          <a href="https://srhin.org/" class="inline-block">
+          <a href="https://prime.srhin.org" class="inline-block">
             <img src="https://srhin.org/wp-content/uploads/2023/02/Logo-with-horizontal-text-colour@4x.png" alt="Slum and Rural Health Initiative" class="h-10 w-auto">
           </a>
           <p class="text-slate-600 leading-relaxed font-body text-sm max-w-sm">
-            Leveraging advocacy, research, and technology to advance health equity in Africa’s most underserved communities.
+            Partnership for Reproductive Health, Infectious Disease &amp; Maternal and Child Health Equity Center. Advancing health equity through research, innovation, and community partnerships.
           </p>
           
           <!-- Social Icons -->
           <div class="flex items-center gap-3 pt-2">
-            <a href="https://twitter.com/SRHINAfrica" target="_blank" rel="noopener noreferrer" aria-label="X-twitter" class="w-9 h-9 rounded-full bg-slate-100 flex items-center justify-center text-slate-700 hover:bg-[#003366] hover:text-white transition">
+            <a href="https://twitter.com/SRHINAfrica" target="_blank" rel="noopener noreferrer" aria-label="X-twitter" class="w-9 h-9 rounded-full bg-slate-100 flex items-center justify-center text-slate-700 hover:bg-[#002190] hover:text-white transition">
               <svg class="w-4 h-4 fill-current" viewBox="0 0 512 512"><path d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"/></svg>
             </a>
-            <a href="https://www.linkedin.com/company/slum-and-rural-health-initiative-network/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="w-9 h-9 rounded-full bg-slate-100 flex items-center justify-center text-slate-700 hover:bg-[#003366] hover:text-white transition">
+            <a href="https://www.linkedin.com/company/srhin-africa/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="w-9 h-9 rounded-full bg-slate-100 flex items-center justify-center text-slate-700 hover:bg-[#002190] hover:text-white transition">
               <svg class="w-4 h-4 fill-current" viewBox="0 0 448 512"><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
             </a>
-            <a href="https://www.youtube.com/channel/UCK7ziQ2SSedP-dzCEjbQutA" target="_blank" rel="noopener noreferrer" aria-label="YouTube" class="w-9 h-9 rounded-full bg-slate-100 flex items-center justify-center text-slate-700 hover:bg-[#003366] hover:text-white transition">
+            <a href="https://www.youtube.com/channel/UCK7ziQ2SSedP-dzCEjbQutA" target="_blank" rel="noopener noreferrer" aria-label="YouTube" class="w-9 h-9 rounded-full bg-slate-100 flex items-center justify-center text-slate-700 hover:bg-[#002190] hover:text-white transition">
               <svg class="w-4 h-4 fill-current" viewBox="0 0 576 512"><path d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"/></svg>
             </a>
-            <a href="https://www.instagram.com/srhinafrica" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="w-9 h-9 rounded-full bg-slate-100 flex items-center justify-center text-slate-700 hover:bg-[#003366] hover:text-white transition">
+            <a href="https://www.instagram.com/srhinafrica" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="w-9 h-9 rounded-full bg-slate-100 flex items-center justify-center text-slate-700 hover:bg-[#002190] hover:text-white transition">
               <svg class="w-4 h-4 fill-current" viewBox="0 0 448 512"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg>
             </a>
             <a href="https://web.facebook.com/srhinAfrica" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="w-9 h-9 rounded-full bg-slate-100 flex items-center justify-center text-slate-700 hover:bg-[#003366] hover:text-white transition">
@@ -779,23 +779,28 @@
           </div>
         </div>
 
-        <!-- About Us -->
+        <!-- Navigation Links -->
         <div class="sm:col-span-1 lg:col-span-2 space-y-4">
-          <h2 class="text-base font-bold text-slate-900 font-heading">About Us</h2>
+          <h2 class="text-base font-bold text-slate-900 font-heading">Navigation</h2>
           <ul class="space-y-2 text-sm text-slate-600 font-body">
-            <li><a href="https://srhin.org/our-values/" class="hover:text-[#002190] transition">Our Values</a></li>
-            <li><a href="https://srhin.org/leadership-team/" class="hover:text-[#002190] transition">Leadership Team</a></li>
-            <li><a href="https://srhin.org/anthem-and-pledge/" class="hover:text-[#002190] transition">Voice &amp; Commitment</a></li>
+            <li><a href="#" class="hover:text-[#002190] transition">Home</a></li>
+            <li><a href="#about" class="hover:text-[#002190] transition">About</a></li>
+            <li><a href="#mission" class="hover:text-[#002190] transition">Mission</a></li>
+            <li><a href="#programs" class="hover:text-[#002190] transition">Programs</a></li>
+            <li><a href="#focus-areas" class="hover:text-[#002190] transition">Focus Areas</a></li>
+            <li><a href="#insights" class="hover:text-[#002190] transition">Insights</a></li>
+            <li><a href="#team" class="hover:text-[#002190] transition">Team</a></li>
           </ul>
         </div>
 
-        <!-- Get Involved -->
+        <!-- Other Research Centers -->
         <div class="sm:col-span-1 lg:col-span-2 space-y-4">
-          <h2 class="text-base font-bold text-slate-900 font-heading">Get Involved</h2>
+          <h2 class="text-base font-bold text-slate-900 font-heading">Other Centers</h2>
           <ul class="space-y-2 text-sm text-slate-600 font-body">
-            <li><a href="https://srhin.org/donate/" class="hover:text-[#002190] transition">Donate</a></li>
-            <li><a href="https://srhin.org/volunteer/" class="hover:text-[#002190] transition">Volunteer</a></li>
-            <li><a href="https://srhin.org/career/" class="hover:text-[#002190] transition">Join Our Team</a></li>
+            <li><a href="https://alpha.srhin.org" target="_blank" rel="noopener noreferrer" class="hover:text-[#002190] transition">ALPHA</a></li>
+            <li><a href="https://mhile.srhin.org" target="_blank" rel="noopener noreferrer" class="hover:text-[#002190] transition">MHILE</a></li>
+            <li><a href="https://cohazd.srhin.org" target="_blank" rel="noopener noreferrer" class="hover:text-[#002190] transition">COHAZD</a></li>
+            <li><a href="https://cempher.srhin.org" target="_blank" rel="noopener noreferrer" class="hover:text-[#002190] transition">CEMPHER</a></li>
           </ul>
         </div>
 
@@ -836,10 +841,10 @@
 
       <!-- Sub-footer / Legal -->
       <div class="mt-14 pt-8 border-t border-slate-200 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500 font-body">
-        <p>&copy; 2026 Slum and Rural Health Initiative Network. All rights reserved.</p>
+        <p>&copy; 2026 PRIME Research Centre. All rights reserved.</p>
         <div class="flex items-center gap-6">
-          <a href="https://srhin.org/privacy-policy/" class="hover:text-[#002190] transition">Privacy Policy</a>
-          <a href="https://srhin.org/disclaimer-page/" class="hover:text-[#002190] transition">Disclaimer Page</a>
+          <a href="https://srhin.org/privacy-policy/" target="_blank" rel="noopener noreferrer" class="hover:text-[#002190] transition">Privacy Policy</a>
+          <a href="https://srhin.org/disclaimer-page/" target="_blank" rel="noopener noreferrer" class="hover:text-[#002190] transition">Disclaimer Page</a>
         </div>
       </div>
     </div>
@@ -891,126 +896,7 @@
     }
   </script>
 
-  <!-- Marquee Runner -->
-  <script>
-    (function() {
-      const section = document.getElementById('srhinPartnersSection');
-      const rowTop = document.getElementById('marqueeRowTop');
-
-      if (!section || !rowTop) return;
-
-      function setupMarqueeRow(rowEl) {
-        const track = rowEl.querySelector('.srhin-marquee-track');
-        if (!track) return null;
-        track.innerHTML += track.innerHTML;
-        return { row: rowEl, track: track, pos: 0, halfWidth: 0, isHovered: false };
-      }
-
-      const marqueeTop = setupMarqueeRow(rowTop);
-
-      function updateMetrics() {
-        if (marqueeTop) marqueeTop.halfWidth = marqueeTop.track.scrollWidth / 2;
-      }
-
-      window.addEventListener('load', updateMetrics);
-      updateMetrics();
-      window.addEventListener('resize', updateMetrics);
-
-      rowTop.addEventListener('mouseenter', () => marqueeTop.isHovered = true);
-      rowTop.addEventListener('mouseleave', () => marqueeTop.isHovered = false);
-      rowTop.addEventListener('touchstart', () => marqueeTop.isHovered = true, { passive: true });
-      rowTop.addEventListener('touchend', () => marqueeTop.isHovered = false);
-
-      const speed = 0.8;
-
-      function animate() {
-        if (marqueeTop && !marqueeTop.isHovered) {
-          marqueeTop.pos -= speed;
-          if (Math.abs(marqueeTop.pos) >= marqueeTop.halfWidth) {
-            marqueeTop.pos += marqueeTop.halfWidth;
-          }
-          marqueeTop.track.style.transform = `translate3d(${marqueeTop.pos}px, 0, 0)`;
-        }
-
-        requestAnimationFrame(animate);
-      }
-
-      requestAnimationFrame(animate);
-    })();
-  </script>
-
-  <!-- Horizontal Zig-Zag Infinite Scroller & Manual Drag/Scroll Support -->
-  <script>
-    (function() {
-      const scroller = document.getElementById('cohazdScroller');
-      const track = document.getElementById('cohazdTrack');
-      if (!scroller || !track) return;
-
-      // Duplicate content for smooth infinite looping
-      track.innerHTML += track.innerHTML;
-
-      let scrollPos = 0;
-      let speed = 0.7;
-      let isPaused = false;
-      let isDown = false;
-      let startX;
-      let scrollLeft;
-
-      function autoScroll() {
-        if (!isPaused && !isDown) {
-          scrollPos += speed;
-          if (scrollPos >= (track.scrollWidth / 2)) {
-            scrollPos = 0;
-          }
-          scroller.scrollLeft = scrollPos;
-        } else {
-          scrollPos = scroller.scrollLeft;
-        }
-        requestAnimationFrame(autoScroll);
-      }
-
-      // Mouse drag handlers for manual scrolling
-      scroller.addEventListener('mousedown', (e) => {
-        isDown = true;
-        isPaused = true;
-        startX = e.pageX - scroller.offsetLeft;
-        scrollLeft = scroller.scrollLeft;
-      });
-
-      scroller.addEventListener('mouseleave', () => {
-        isDown = false;
-        isPaused = false;
-      });
-
-      scroller.addEventListener('mouseup', () => {
-        isDown = false;
-        isPaused = false;
-      });
-
-      scroller.addEventListener('mousemove', (e) => {
-        if (!isDown) return;
-        e.preventDefault();
-        const x = e.pageX - scroller.offsetLeft;
-        const walk = (x - startX) * 2;
-        scroller.scrollLeft = scrollLeft - walk;
-        scrollPos = scroller.scrollLeft;
-      });
-
-      // Touch events for mobile
-      scroller.addEventListener('touchstart', () => {
-        isPaused = true;
-      }, { passive: true });
-
-      scroller.addEventListener('touchend', () => {
-        isPaused = false;
-        scrollPos = scroller.scrollLeft;
-      });
-
-      requestAnimationFrame(autoScroll);
-    })();
-  </script>
-
-  <!-- Team Carousel Script -->
+  <!-- Team Carousel -->
   <script>
     (function() {
       const section = document.getElementById('srhinTeamCarousel');
